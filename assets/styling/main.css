@@ -1,0 +1,73 @@
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+
+  min-height: 100%;
+  width: 100%;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100svh;
+  min-width: 320px;
+}
+
+.container {
+  padding: 12px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
+  margin: 0 auto;
+  
+  border: 1px solid red;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12p;
+  padding: 12px 12px;
+}
+
+.name, .wallet {
+  width: 35%;
+}
+
+.wallet {
+  text-align: right;
+
+  overflow: hidden;
+  text-emphasis: ellipsis;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.character {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: cyan;
+}
+
+.footer {
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+}
