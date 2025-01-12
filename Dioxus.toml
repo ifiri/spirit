@@ -1,12 +1,12 @@
 [application]
 
 # App (Project) Name
-name = "hot_dog"
+name = "spirit"
 
 [web.app]
 
 # HTML title tag content
-title = "hot_dog"
+title = "spirit"
 
 # include `assets` in web platform
 [web.resource]

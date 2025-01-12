@@ -1,18 +1,36 @@
 use dioxus::prelude::*;
 
-use components::Navbar;
-use views::{Blog, Home};
+use views::{Loader, Welcome, Home, Tasks, Friends, Wallet, Care};
+use layouts::NavbarLayout;
 
 mod components;
+mod layouts;
 mod views;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
 enum Route {
     #[route("/")]
-    Home {},
-    #[route("/blog/:id")]
-    Blog { id: i32 },
+    Loader {},
+
+    #[layout(NavbarLayout)]
+      #[route("/i")]
+      Home {},
+
+    #[route("/welcome")]
+    Welcome {},
+
+    #[route("/tasks")]
+    Tasks {},
+
+    #[route("/Friends")]
+    Friends {},
+
+    #[route("/wallet")]
+    Wallet {},
+
+    #[route("/care")]
+    Care {},
 }
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
@@ -24,14 +42,13 @@ fn main() {
 
 #[component]
 fn App() -> Element {
-    // Build cool things ✌️
+  // Build cool things ✌️
 
-    rsx! {
-        // Global app resources
-        document::Link { rel: "icon", href: FAVICON }
-        document::Link { rel: "stylesheet", href: MAIN_CSS }
+  rsx! {
+    // Global app resources
+    document::Link { rel: "icon", href: FAVICON }
+    document::Link { rel: "stylesheet", href: MAIN_CSS }
 
-
-        Router::<Route> {}
-    }
+    Router::<Route> {}
+  }
 }
